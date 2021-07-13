@@ -11,6 +11,8 @@ function preload(){
   car2Img=loadImage("images/car2.png")
   car3Img=loadImage("images/car3.png")
   car4Img=loadImage("images/car4.png")
+
+  trackImg=loadImage("images/track.jpg")
 }
 function setup(){
   database = firebase.database();
@@ -35,5 +37,14 @@ function draw(){
     clear ();
     game.play()
    }
+
+   if(player.distance>3700){
+     gameState=2
+     game.update(2)
+   }
+
+   if(gameState===2)[
+     game.end()
+   ]
 }
 

@@ -40,6 +40,8 @@ if(countRef.exists()){
 
     play (){
 
+
+
         form.greetings.hide()
         textSize(30)
         text ("game start", 200, 200)
@@ -54,11 +56,11 @@ if(countRef.exists()){
 
 
         var index=0
-        var x=200
+        var x=395
         if(allPlayers !== undefined){
         var newY= 200
-       for ( var plr in allPlayers){
-         
+         image( trackImg,0,-height*4,displayWidth,height*5)
+       for ( var plr in allPlayers){   
         cars[index].x=x
         cars[index].y=height-allPlayers[plr].distance
         if( plr === "player" + player.index){
@@ -78,5 +80,8 @@ if(countRef.exists()){
           x+=200
        }
     }
+    }
+    end(){
+       alert("you won ")
     }
 }
