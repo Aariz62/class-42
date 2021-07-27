@@ -9,7 +9,8 @@ class Form{
        this.reset.mousePressed(()=>{
            database.ref("/").update({
                playerCount:0,
-               gameState:0
+               gameState:0,
+               rank:0
            })
        })
 
